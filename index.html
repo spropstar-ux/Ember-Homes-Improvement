@@ -138,12 +138,9 @@
                         A one-stop remodeling solution that transforms dated homes into like-new spaces with thoughtful design, skilled crews, and transparent communication.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-[#36718b] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#2a5568] transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl">
+                        <a href="#services" class="bg-[#36718b] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#2a5568] transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl text-center">
                             Explore Services
-                        </button>
-                        <button class="border-2 border-[#36718b] text-[#36718b] px-8 py-4 rounded-lg font-semibold hover:bg-[#36718b] hover:text-white transition duration-300 transform hover:scale-105">
-                            Learn More
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -471,36 +468,36 @@
         <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-start">
                 <!-- Map Card -->
-                <div class="relative rounded-2xl shadow-lg overflow-hidden bg-gray-50">
-                    <img src="./images/map.avif" alt="USA outline map" class="w-full h-72 sm:h-96 object-cover grayscale opacity-95">
-                    <div class="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent"></div>
-                    <div class="absolute left-6 bottom-6">
-                        <h3 class="text-lg font-bold text-gray-900">Service Area</h3>
-                        <p class="text-sm text-gray-600">Proudly serving homes across the United States</p>
+                <div class="relative rounded-2xl shadow-lg overflow-hidden bg-gray-50 animate-fade-in-left group">
+                    <img src="./images/map.avif" alt="USA outline map" class="w-full h-72 sm:h-96 object-cover grayscale opacity-95 group-hover:grayscale-0 group-hover:opacity-100 transition duration-700 transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent group-hover:from-white/60 transition duration-500"></div>
+                    <div class="absolute left-6 bottom-6 animate-fade-in-up animate-delay-200">
+                        <h3 class="text-lg font-bold text-gray-900 group-hover:text-[#36718b] transition duration-300">Service Area</h3>
+                        <p class="text-sm text-gray-600 group-hover:text-gray-900 transition duration-300">Proudly serving homes across the United States</p>
                     </div>
                 </div>
 
                 <!-- Top Cities / Coverage Details -->
-                <div class="space-y-6">
-                    <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100">
-                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Top Cities We Serve</h4>
-                        <p class="text-sm text-gray-600 mb-4">If your city isn't listed, contact us — we may still cover your area.</p>
+                <div class="space-y-6 animate-fade-in-right">
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-xl hover:border-[#36718b] transition duration-500 transform hover:-translate-y-2 animate-fade-in-up">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2 text-center sm:text-left">Top Cities We Serve</h4>
+                        <p class="text-sm text-gray-600 mb-4 text-center sm:text-left">If your city isn't listed, contact us — we may still cover your area.</p>
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">Seattle, WA</span>
-                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">Portland, OR</span>
-                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">San Francisco, CA</span>
-                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">Los Angeles, CA</span>
-                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">Denver, CO</span>
-                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">Houston, TX</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium hover:bg-[#36718b] hover:text-white transition duration-300 transform hover:scale-110 cursor-pointer animate-scale-in animate-delay-100">Seattle, WA</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium hover:bg-[#36718b] hover:text-white transition duration-300 transform hover:scale-110 cursor-pointer animate-scale-in animate-delay-200">Portland, OR</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium hover:bg-[#36718b] hover:text-white transition duration-300 transform hover:scale-110 cursor-pointer animate-scale-in animate-delay-300">San Francisco, CA</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium hover:bg-[#36718b] hover:text-white transition duration-300 transform hover:scale-110 cursor-pointer animate-scale-in animate-delay-400">Los Angeles, CA</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium hover:bg-[#36718b] hover:text-white transition duration-300 transform hover:scale-110 cursor-pointer animate-scale-in animate-delay-500">Denver, CO</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium hover:bg-[#36718b] hover:text-white transition duration-300 transform hover:scale-110 cursor-pointer animate-scale-in animate-delay-600">Houston, TX</span>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100">
-                        <h4 class="text-lg font-semibold text-gray-900 mb-2">How Coverage Works</h4>
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-xl hover:border-[#36718b] transition duration-500 transform hover:-translate-y-2 animate-fade-in-up animate-delay-200">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2 flex items-center text-center sm:text-left"><i class="fa-solid fa-info-circle text-[#36718b] mr-2"></i> How Coverage Works</h4>
                         <ul class="text-sm text-gray-600 space-y-2 pl-4 list-disc">
-                            <li>Core service area includes major metro regions shown above.</li>
-                            <li>Outlying suburbs are evaluated case-by-case.</li>
-                            <li>For custom quotes outside the map, use the form or call us directly.</li>
+                            <li class="hover:text-[#36718b] transition duration-300 transform hover:translate-x-1">Core service area includes major metro regions shown above.</li>
+                            <li class="hover:text-[#36718b] transition duration-300 transform hover:translate-x-1">Outlying suburbs are evaluated case-by-case.</li>
+                            <li class="hover:text-[#36718b] transition duration-300 transform hover:translate-x-1">For custom quotes outside the map, use the form or call us directly.</li>
                         </ul>
                     </div>
                 </div>
@@ -528,7 +525,7 @@
                         <div class="flex items-start hover:translate-x-2 transition duration-300">
                             <div class="flex-shrink-0">
                                 <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-20">
-                                    ⚡
+                                    <i class="fas fa-bolt text-yellow-300 text-xl"></i>
                                 </div>
                             </div>
                             <div class="ml-4">
@@ -540,7 +537,7 @@
                         <div class="flex items-start hover:translate-x-2 transition duration-300">
                             <div class="flex-shrink-0">
                                 <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-20">
-                                    💰
+                                    <i class="fas fa-dollar-sign text-green-300 text-xl"></i>
                                 </div>
                             </div>
                             <div class="ml-4">
@@ -552,7 +549,7 @@
                         <div class="flex items-start hover:translate-x-2 transition duration-300">
                             <div class="flex-shrink-0">
                                 <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-20">
-                                    ✓
+                                    <i class="fas fa-check-circle text-green-300 text-xl"></i>
                                 </div>
                             </div>
                             <div class="ml-4">
