@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ember Home Improvement - Transform Your Space</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="images/Ember Homes Improvement Logo.png" type="image/x-icon">
+</head>
+<body class="bg-white">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow-lg z-50 navbar-animate border-b border-gray-200">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo (Left) - Responsive -->
+                <a href="index.html" class="flex items-center group  flex-shrink-0 min-w-0">
+                    <img src="images/Ember Homes Improvement Logo.png" alt="Ember Logo" class="h-10 sm:h-12 w-auto hover:scale-110 transition-transform duration-300">
+                    <span class="inline ml-2 text-sm sm:text-xl whitespace-nowrap">
+                        <span class="text-[#36718b]" style="font-weight: 700;">Ember</span>
+                        <span class="text-[#36718b]" style="font-weight: 300;">Homes Improvement</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Menu (Center) - Hidden on mobile/tablet -->
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-8 flex-1 justify-center">
+                    <a href="#about" class="text-gray-800 hover:text-[#36718b] transition duration-300 font-medium text-sm xl:text-base">About</a>
+                    <a href="#services" class="text-gray-800 hover:text-[#36718b] transition duration-300 font-medium text-sm xl:text-base">Services</a>
+                    <a href="#why-choose" class="text-gray-800 hover:text-[#36718b] transition duration-300 font-medium text-sm xl:text-base">Why Choose Us</a>
+                </div>
+
+                <!-- Call Button (Right) - Responsive -->
+                <div class="hidden lg:flex items-center flex-shrink-0">
+                    <button class="bg-[#36718b] text-white px-4 sm:px-6 py-2 rounded-lg hover:bg-[#2a5568] transition duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base whitespace-nowrap">
+                        123-456-789
+                    </button>
+                </div>
+
+                <!-- Mobile/Tablet Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-gray-800 hover:text-[#36718b] focus:outline-none focus:ring-2 focus:ring-[#36718b] rounded p-1 transition duration-300">
+                    <svg id="menuIcon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile/Tablet Menu - Full responsive -->
+            <div id="mobileMenu" class="hidden lg:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out origin-top">
+                <div class="pb-4 space-y-1 bg-gray-50 border-t border-gray-200">
+                    <a href="#home" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Home</a>
+                    <a href="#about" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">About</a>
+                    <a href="#services" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Services</a>
+                    <a href="#why-choose" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Why Choose Us</a>
+                    <a href="#testimonials" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Testimonials</a>
+                    <a href="#contact" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Contact</a>
+                    <button class="w-[calc(100%-2rem)] mx-4 bg-[#36718b] text-white px-6 py-3 rounded-lg mt-3 hover:bg-[#2a5568] transition duration-300 shadow-lg font-medium">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12 min-h-screen flex items-center bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 overflow-hidden opacity-30">
+            <div class="animated-blob blob-1"></div>
+            <div class="animated-blob blob-2"></div>
+            <div class="animated-blob blob-3"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Left Content -->
+                <div class="fade-in-left">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Transform Your <span class="text-[#36718b]">Home Today</span>
+                    </h1>
+                    <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 mb-8 leading-relaxed">
+                        A one-stop remodeling solution that transforms dated homes into like-new spaces with thoughtful design, skilled crews, and transparent communication.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-[#36718b] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#2a5568] transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl">
+                            Explore Services
+                        </button>
+                        <button class="border-2 border-[#36718b] text-[#36718b] px-8 py-4 rounded-lg font-semibold hover:bg-[#36718b] hover:text-white transition duration-300 transform hover:scale-105">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="fade-in-right">
+                    <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl p-6 sm:p-8 md:p-10 form-animate border border-teal-200 hover:shadow-3xl transition duration-500 transform hover:-translate-y-1">
+                        <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Get Your Free Quote</h2>
+                        <p class="text-gray-600 mb-6 text-xs sm:text-sm">Fill in your details and we'll contact you shortly</p>
+
+                        <form id="contactForm1" class="space-y-4">
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label class="block text-sm font-semibold text-gray-800 mb-2">Full Name</label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="John Doe"
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#36718b] transition duration-300"
+                                    requiblue
+                                >
+                                <span class="error-msg text-[#36718b] text-sm mt-1 hidden">Please enter a valid name</span>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="form-group">
+                                <label class="block text-sm font-semibold text-gray-800 mb-2">Email Address</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="john@example.com"
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#36718b] transition duration-300"
+                                    requiblue
+                                >
+                                <span class="error-msg text-[#36718b] text-sm mt-1 hidden">Please enter a valid email</span>
+                            </div>
+
+                            <!-- Phone Field -->
+                            <div class="form-group">
+                                <label class="block text-sm font-semibold text-gray-800 mb-2">Phone Number</label>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="+1 (555) 000-0000"
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#36718b] transition duration-300"
+                                    requiblue
+                                >
+                                <span class="error-msg text-[#36718b] text-sm mt-1 hidden">Please enter a valid phone number</span>
+                            </div>
+
+                            <!-- Address Field -->
+                            <div class="form-group">
+                                <label class="block text-sm font-semibold text-gray-800 mb-2">Address</label>
+                                <input
+                                    type="text"
+                                    name="address"
+                                    placeholder="123 Main St, City, State"
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#36718b] transition duration-300"
+                                    requiblue
+                                >
+                                <span class="error-msg text-[#36718b] text-sm mt-1 hidden">Please enter a valid address</span>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="w-full bg-[#36718b] text-white font-bold py-3 rounded-lg hover:bg-[#2a5568] transition duration-300 transform hover:scale-105 mt-6 shadow-lg hover:shadow-xl"
+                            >
+                                Get Free Quote
+                            </button>
+
+                            <p class="text-xs text-gray-500 text-center mt-4">We'll respond within 24 hours</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section with Counter -->
+    <section id="about" class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Who We Are</h2>
+                <p class="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                    With over a decade of experience, we've transformed thousands of homes into beautiful, functional spaces.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                <!-- Counter 1 -->
+                <div class="counter-card bg-gradient-to-br from-teal-50 to-teal-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
+                    <div class="text-5xl font-bold bg-gradient-to-r from-[#36718b] to-teal-600 bg-clip-text text-transparent mb-4">
+                        <span class="counter" data-target="5000">0</span>+
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Projects Completed</h3>
+                    <p class="text-gray-600">Successful home transformations</p>
+                </div>
+
+                <!-- Counter 2 -->
+                <div class="counter-card bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
+                    <div class="text-5xl font-bold bg-gradient-to-r from-[#36718b] to-cyan-600 bg-clip-text text-transparent mb-4">
+                        <span class="counter" data-target="100">0</span>%
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Client Satisfaction</h3>
+                    <p class="text-gray-600">Guaranteed quality & service</p>
+                </div>
+
+                <!-- Counter 3 -->
+                <div class="counter-card bg-gradient-to-br from-teal-50 to-teal-50 rounded-2xl p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
+                    <div class="text-5xl font-bold bg-gradient-to-r from-[#36718b] to-teal-600 bg-clip-text text-transparent mb-4">
+                        <span class="counter" data-target="15">0</span>+
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Years of Experience</h3>
+                    <p class="text-gray-600">Industry expertise & excellence</p>
+                </div>
+
+                <!-- Counter 4 -->
+                <div class="counter-card bg-gradient-to-br from-teal-50 to-teal-50 rounded-2xl p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
+                    <div class="text-5xl font-bold bg-gradient-to-r from-[#36718b] to-teal-600 bg-clip-text text-transparent mb-4">
+                        <span class="counter" data-target="200">0</span>+
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Expert Team Members</h3>
+                    <p class="text-gray-600">Skilled professionals dedicated</p>
+                </div>
+            </div>
+
+            <!-- About Text -->
+            <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-left">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Building Dreams, Creating Spaces</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        At Ember Home Improvement, we believe every home has potential. Our dedicated team works tirelessly to transform spaces into sanctuaries that reflect your vision and lifestyle.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        From kitchen renovations to bathroom makeovers, exterior upgrades to complete home transformations, we bring expertise, creativity, and attention to detail to every project.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-700 hover:text-[#36718b] transition duration-300 transform hover:translate-x-1">
+                            <span class="w-3 h-3 bg-gradient-to-r from-[#36718b] to-teal-600 rounded-full mr-3"></span>
+                            Premium Quality Materials
+                        </li>
+                        <li class="flex items-center text-gray-700 hover:text-[#36718b] transition duration-300 transform hover:translate-x-1">
+                            <span class="w-3 h-3 bg-gradient-to-r from-[#36718b] to-teal-600 rounded-full mr-3"></span>
+                            Professional Certified Team
+                        </li>
+                        <li class="flex items-center text-gray-700 hover:text-[#36718b] transition duration-300 transform hover:translate-x-1">
+                            <span class="w-3 h-3 bg-gradient-to-r from-[#36718b] to-teal-600 rounded-full mr-3"></span>
+                            On-time Project Delivery
+                        </li>
+                        <li class="flex items-center text-gray-700 hover:text-[#36718b] transition duration-300 transform hover:translate-x-1">
+                            <span class="w-3 h-3 bg-gradient-to-r from-[#36718b] to-teal-600 rounded-full mr-3"></span>
+                            Competitive & Transparent Pricing
+                        </li>
+                    </ul>
+                </div>
+                <div class="fade-in-right">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-b from-[#36718b] to-teal-600 rounded-2xl blur-2xl opacity-30"></div>
+                        <div class="relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition duration-500">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Home Improvement" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 sm:py-16 lg:py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-fadeInDown">Our Services</h2>
+                <p class="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive home improvement solutions tailored to your needs
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md sm:shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-teal-600 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
+                            🍳
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Kitchen Renovation</h3>
+                        <p class="text-gray-600 leading-relaxed">Transform your kitchen with modern designs, premium cabinets, and state-of-the-art appliances.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-cyan-500 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
+                            🚿
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Bathroom Remodel</h3>
+                        <p class="text-gray-600 leading-relaxed">Luxurious bathroom designs with elegant fixtures, spa-like features, and modern tile work.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-teal-600 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
+                            🏠
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Exterior Work</h3>
+                        <p class="text-gray-600 leading-relaxed">Roofing, siding, landscaping, and exterior upgrades to enhance your home's curb appeal.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-teal-600 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
+                            🎨
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Interior Design</h3>
+                        <p class="text-gray-600 leading-relaxed">Custom interior design solutions that maximize space, comfort, and aesthetic appeal.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-teal-600 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
+                            📱
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Smart Home</h3>
+                        <p class="text-gray-600 leading-relaxed">IoT solutions and smart automation for modern, efficient, and connected homes.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-teal-600 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
+                            🔧
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Maintenance & Repairs</h3>
+                        <p class="text-gray-600 leading-relaxed">Comprehensive maintenance plans and emergency repair services to keep your home perfect.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose" class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-fadeInDown">Why Choose Us?</h2>
+                <p class="text-sm sm:text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
+                    Experience the difference that professional, transparent, and dedicated service makes
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                <!-- Reason 1 -->
+                <div class="reason-card bg-gradient-to-br from-teal-50 to-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md sm:shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-teal-200 hover:border-[#36718b]">
+                    <div class="w-14 h-14 bg-[#36718b] rounded-full flex items-center justify-center mb-6 mx-auto text-white text-xl">✓</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Thoughtful Design</h3>
+                    <p class="text-gray-700 text-center">We listen to your vision and create spaces that truly reflect your style and needs.</p>
+                </div>
+
+                <!-- Reason 2 -->
+                <div class="reason-card bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-teal-200 hover:border-[#36718b]">
+                    <div class="w-14 h-14 bg-[#36718b] rounded-full flex items-center justify-center mb-6 mx-auto text-white text-xl">💰</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Transparent Pricing</h3>
+                    <p class="text-gray-700 text-center">No hidden costs. We provide detailed quotes and keep you informed every step of the way.</p>
+                </div>
+
+                <!-- Reason 3 -->
+                <div class="reason-card bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-teal-200 hover:border-[#36718b]">
+                    <div class="w-14 h-14 bg-[#36718b] rounded-full flex items-center justify-center mb-6 mx-auto text-white text-xl">👷</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Skilled Crews</h3>
+                    <p class="text-gray-700 text-center">Our certified professionals bring years of expertise to every project, ensuring top-quality results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-12 sm:py-16 lg:py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-fadeInDown">Client Testimonials</h2>
+                <p class="text-sm sm:text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
+                    Hear what our satisfied clients have to say about their experience with Ember
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border-l-4 border-l-[#36718b] shadow-md sm:shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                    <div class="flex items-center mb-6"><div class="flex text-amber-400">★★★★★</div></div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"Ember transformed our kitchen beyond our expectations. The team was professional, punctual, and delivered exceptional quality. Highly recommended!"</p>
+                    <div class="border-t border-gray-200 pt-4"><p class="font-semibold text-gray-900">Sarah Johnson</p><p class="text-gray-600 text-sm">Kitchen Renovation, 2024</p></div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-2xl p-8 border-l-4 border-l-[#36718b] shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                    <div class="flex items-center mb-6"><div class="flex text-amber-400">★★★★★</div></div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"From the initial consultation to the final touch, the Ember team demonstrated professionalism and attention to detail. Our bathroom is now a sanctuary!"</p>
+                    <div class="border-t border-gray-200 pt-4"><p class="font-semibold text-gray-900">Michael Chen</p><p class="text-gray-600 text-sm">Bathroom Remodel, 2024</p></div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-2xl p-8 border-l-4 border-l-[#36718b] shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                    <div class="flex items-center mb-6"><div class="flex text-amber-400">★★★★★</div></div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"The smart home upgrades they installed are incredible. Everything works seamlessly, and the savings on energy are already noticeable. Worth every penny!"</p>
+                    <div class="border-t border-gray-200 pt-4"><p class="font-semibold text-gray-900">Emily Rodriguez</p><p class="text-gray-600 text-sm">Smart Home Installation, 2024</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redesigned Service Area: two-column map + top cities list -->
+    <section id="service-area" class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-start">
+                <!-- Map Card -->
+                <div class="relative rounded-2xl shadow-lg overflow-hidden bg-gray-50">
+                    <img src="./images/map.avif" alt="USA outline map" class="w-full h-72 sm:h-96 object-cover grayscale opacity-95">
+                    <div class="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent"></div>
+                    <div class="absolute left-6 bottom-6">
+                        <h3 class="text-lg font-bold text-gray-900">Service Area</h3>
+                        <p class="text-sm text-gray-600">Proudly serving homes across the United States</p>
+                    </div>
+                </div>
+
+                <!-- Top Cities / Coverage Details -->
+                <div class="space-y-6">
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Top Cities We Serve</h4>
+                        <p class="text-sm text-gray-600 mb-4">If your city isn't listed, contact us — we may still cover your area.</p>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">Seattle, WA</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">Portland, OR</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">San Francisco, CA</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">Los Angeles, CA</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">Denver, CO</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 rounded-full bg-[#eaf6f4] text-[#0f5f57] font-medium">Houston, TX</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">How Coverage Works</h4>
+                        <ul class="text-sm text-gray-600 space-y-2 pl-4 list-disc">
+                            <li>Core service area includes major metro regions shown above.</li>
+                            <li>Outlying suburbs are evaluated case-by-case.</li>
+                            <li>For custom quotes outside the map, use the form or call us directly.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Second Form -->
+    <section id="contact" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-[#36718b] to-teal-700 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="animated-blob blob-1"></div>
+            <div class="animated-blob blob-2"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                <!-- Left Content -->
+                <div class="fade-in-left">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Transform Your Home?</h2>
+                    <p class="text-sm sm:text-base md:text-lg lg:text-xl text-teal-100 mb-8 leading-relaxed">
+                        Get started with a free consultation and discover how Ember can bring your home improvement dreams to life. Our team is ready to help!
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start hover:translate-x-2 transition duration-300">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-20">
+                                    ⚡
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-white">Fast & Efficient</h3>
+                                <p class="mt-2 text-teal-100">Quick project completion without sacrificing quality</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start hover:translate-x-2 transition duration-300">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-20">
+                                    💰
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-white">Affordable Pricing</h3>
+                                <p class="mt-2 text-teal-100">Competitive rates with zero hidden charges</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start hover:translate-x-2 transition duration-300">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-20">
+                                    ✓
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-white">Guaranteed Quality</h3>
+                                <p class="mt-2 text-teal-100">Full warranty and professional craftsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="fade-in-right">
+                    <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl p-6 sm:p-8 md:p-10 form-animate hover:shadow-3xl transition duration-500 transform hover:-translate-y-1">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Schedule Your Consultation</h3>
+                        <p class="text-gray-600 mb-6 text-xs sm:text-sm">Complete this form and we'll contact you within 24 hours</p>
+
+                        <form id="contactForm2" class="space-y-4">
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label class="block text-sm font-semibold text-gray-800 mb-2">Full Name</label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="John Doe"
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#36718b] transition duration-300"
+                                    requiblue
+                                >
+                                <span class="error-msg text-[#36718b] text-sm mt-1 hidden">Please enter a valid name</span>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="form-group">
+                                <label class="block text-sm font-semibold text-gray-800 mb-2">Email Address</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="john@example.com"
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#36718b] transition duration-300"
+                                    requiblue
+                                >
+                                <span class="error-msg text-[#36718b] text-sm mt-1 hidden">Please enter a valid email</span>
+                            </div>
+
+                            <!-- Phone Field -->
+                            <div class="form-group">
+                                <label class="block text-sm font-semibold text-gray-800 mb-2">Phone Number</label>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="+1 (555) 000-0000"
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#36718b] transition duration-300"
+                                    requiblue
+                                >
+                                <span class="error-msg text-[#36718b] text-sm mt-1 hidden">Please enter a valid phone number</span>
+                            </div>
+
+                            <!-- Address Field -->
+                            <div class="form-group">
+                                <label class="block text-sm font-semibold text-gray-800 mb-2">Address</label>
+                                <input
+                                    type="text"
+                                    name="address"
+                                    placeholder="123 Main St, City, State"
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#36718b] transition duration-300"
+                                    requiblue
+                                >
+                                <span class="error-msg text-[#36718b] text-sm mt-1 hidden">Please enter a valid address</span>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="w-full bg-[#36718b] text-white font-bold py-3 rounded-lg hover:bg-[#2a5568] transition duration-300 transform hover:scale-105 mt-6 shadow-lg hover:shadow-xl"
+                            >
+                                Schedule Consultation
+                            </button>
+
+                            <p class="text-xs text-gray-500 text-center mt-4">Your information is safe with us</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+		<footer class="bg-neutral-900 text-slate-400 py-8 sm:py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- Logo + Name (Left) -->
+                <div class="flex flex-col items-center md:items-start">
+                    <a href="#home" class="inline-block mb-3">
+                        <img src="/images/Ember Homes Improvement Logo.png"
+                            alt="Ember Construction Logo" class="h-12 sm:h-16 mb-2">
+                        <span class="font-bold text-lg sm:text-xl" style="color: #36718b;">Ember <span style="font-weight: 100;">Homes Improvement</span></span>
+                    </a>
+                </div>
+
+                <!-- Tagline (Center) -->
+                <p class="text-slate-300 text-center text-sm sm:text-base leading-relaxed">
+                    Transforming homes with quality craftsmanship and transparent service.
+                </p>
+
+                <!-- Links (Right) -->
+                <div class="flex flex-col items-center md:items-end space-y-2">
+                    <a class='text-slate-300 hover:text-[#36718b] transition text-sm sm:text-base' href="./privacypolicy.html">
+                        Privacy Policy
+                    </a>
+                    <p class="text-slate-400 text-xs sm:text-sm">© <span id="currentYear">2025</span> Ember Homes Improvement</p>
+                </div>
+            </div>
+
+            <!-- Separator -->
+            <div class="border-t border-slate-700 opacity-60"></div>
+
+            <!-- Bottom Text -->
+            <div class="text-center text-xs sm:text-sm text-slate-500 pt-6">
+                <p>Proudly serving homes across the United States</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
