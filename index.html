@@ -3,10 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ember Homes Improvement - Transform Your Space</title>
+    <title>Ember Homes Improvement - Professional Home Remodeling & Renovation Services</title>
+    <meta name="description" content="Transform your home with Ember Homes Improvement. Professional kitchen, bathroom, and whole-home renovation services. Free consultation. Trusted contractor.">
+    <meta name="keywords" content="home improvement, remodeling, renovations, kitchen remodel, bathroom remodel, home contractor, construction services">
+    <meta name="author" content="Ember Homes Improvement">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#36718b">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emberhomesimprovement.com/">
+    <meta property="og:title" content="Ember Homes Improvement - Professional Home Renovation Services">
+    <meta property="og:description" content="Transform your home with quality craftsmanship and transparent service. Professional home remodeling contractor.">
+    <meta property="og:image" content="https://emberhomesimprovement.com/images/Ember%20Homes%20Improvement%20Logo.png">
+    <meta property="og:site_name" content="Ember Homes Improvement">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://emberhomesimprovement.com/">
+    <meta name="twitter:title" content="Ember Homes Improvement - Home Renovation Services">
+    <meta name="twitter:description" content="Professional home improvement and remodeling. Transform your space today.">
+    <meta name="twitter:image" content="https://emberhomesimprovement.com/images/Ember%20Homes%20Improvement%20Logo.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://emberhomesimprovement.com/">
+
+    <!-- Sitemap & Robots -->
+    <link rel="sitemap" href="https://emberhomesimprovement.com/sitemap.xml">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" href="images/Ember Homes Improvement Logo.png" type="image/x-icon">
+
+    <!-- Schema.org Structured Data for LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Ember Homes Improvement",
+      "image": "https://emberhomesimprovement.com/images/Ember%20Homes%20Improvement%20Logo.png",
+      "description": "Professional home improvement and renovation services. Transform your home with quality craftsmanship.",
+      "url": "https://emberhomesimprovement.com/",
+      "telephone": "123-456-789",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Your Street Address",
+        "addressLocality": "Your City",
+        "addressRegion": "Your State",
+        "postalCode": "Your Zip",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.facebook.com/emberhomesimprovement",
+        "https://www.instagram.com/emberhomesimprovement"
+      ],
+      "priceRange": "$$",
+      "areaServed": ["United States"]
+    }
+    </script>
+
+    <!-- Google Analytics (Replace G-XXXXXXXXXX with your tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body class="bg-white">
     <!-- Navbar -->
@@ -31,9 +95,10 @@
 
                 <!-- Call Button (Right) - Responsive -->
                 <div class="hidden lg:flex items-center flex-shrink-0">
-                    <button class="bg-[#36718b] text-white px-4 sm:px-6 py-2 rounded-lg hover:bg-[#2a5568] transition duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base whitespace-nowrap">
-                        123-456-789
-                    </button>
+                    <a href="tel:123456789" class="bg-[#36718b] text-white px-4 sm:px-6 py-2 rounded-lg hover:bg-[#2a5568] transition duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base whitespace-nowrap inline-flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>123-456-789</span>
+                    </a>
                 </div>
 
                 <!-- Mobile/Tablet Menu Button -->
@@ -45,35 +110,27 @@
             </div>
 
             <!-- Mobile/Tablet Menu - Full responsive -->
-            <div id="mobileMenu" class="hidden lg:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out origin-top">
-                <div class="pb-4 space-y-1 bg-gray-50 border-t border-gray-200">
-                    <a href="#home" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Home</a>
-                    <a href="#about" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">About</a>
-                    <a href="#services" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Services</a>
-                    <a href="#why-choose" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Why Choose Us</a>
-                    <a href="#testimonials" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Testimonials</a>
-                    <a href="#contact" class="block px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Contact</a>
-                    <button class="w-[calc(100%-2rem)] mx-4 bg-[#36718b] text-white px-6 py-3 rounded-lg mt-3 hover:bg-[#2a5568] transition duration-300 shadow-lg font-medium">
-                        Get Started
-                    </button>
+            <div id="mobileMenu" class="hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out origin-top">
+                <div class="pb-4 space-y-2 bg-gray-50 border-t border-gray-200 flex flex-col items-center">
+                    <a href="#about" class="block w-full text-center px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">About</a>
+                    <a href="#services" class="block w-full text-center px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Services</a>
+                    <a href="#why-choose" class="block w-full text-center px-4 py-3 text-gray-800 hover:bg-teal-100 hover:text-[#36718b] rounded transition duration-300 font-medium">Why Choose Us</a>
+
+                    <a href="tel:123456789" class="w-[calc(100%-2rem)] mx-4 inline-flex justify-center items-center bg-[#36718b] text-white px-6 py-3 rounded-lg mt-3 hover:bg-[#2a5568] transition duration-300 shadow-lg font-medium gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>123-456-789</span>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="pt-24 pb-12 min-h-screen flex items-center bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
-        <!-- Animated Background -->
-        <div class="absolute inset-0 overflow-hidden opacity-30">
-            <div class="animated-blob blob-1"></div>
-            <div class="animated-blob blob-2"></div>
-            <div class="animated-blob blob-3"></div>
-        </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <!-- Left Content -->
-                <div class="fade-in-left">
+                <div>
                     <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                         Transform Your <span class="text-[#36718b]">Home Today</span>
                     </h1>
@@ -91,8 +148,8 @@
                 </div>
 
                 <!-- Right Form -->
-                <div class="fade-in-right">
-                    <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl p-6 sm:p-8 md:p-10 form-animate border border-teal-200 hover:shadow-3xl transition duration-500 transform hover:-translate-y-1">
+                <div>
+                    <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl p-6 sm:p-8 md:p-10 border border-teal-200 hover:shadow-3xl transition duration-500 transform hover:-translate-y-1">
                         <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Get Your Free Quote</h2>
                         <p class="text-gray-600 mb-6 text-xs sm:text-sm">Fill in your details and we'll contact you shortly</p>
 
@@ -176,7 +233,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
                 <!-- Counter 1 -->
-                <div class="counter-card bg-gradient-to-br from-teal-50 to-teal-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
+                <div class="bg-gradient-to-br from-teal-50 to-teal-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
                     <div class="text-5xl font-bold bg-gradient-to-r from-[#36718b] to-teal-600 bg-clip-text text-transparent mb-4">
                         <span class="counter" data-target="5000">0</span>+
                     </div>
@@ -185,7 +242,7 @@
                 </div>
 
                 <!-- Counter 2 -->
-                <div class="counter-card bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
+                <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
                     <div class="text-5xl font-bold bg-gradient-to-r from-[#36718b] to-cyan-600 bg-clip-text text-transparent mb-4">
                         <span class="counter" data-target="100">0</span>%
                     </div>
@@ -194,7 +251,7 @@
                 </div>
 
                 <!-- Counter 3 -->
-                <div class="counter-card bg-gradient-to-br from-teal-50 to-teal-50 rounded-2xl p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
+                <div class="bg-gradient-to-br from-teal-50 to-teal-50 rounded-2xl p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
                     <div class="text-5xl font-bold bg-gradient-to-r from-[#36718b] to-teal-600 bg-clip-text text-transparent mb-4">
                         <span class="counter" data-target="15">0</span>+
                     </div>
@@ -203,7 +260,7 @@
                 </div>
 
                 <!-- Counter 4 -->
-                <div class="counter-card bg-gradient-to-br from-teal-50 to-teal-50 rounded-2xl p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
+                <div class="bg-gradient-to-br from-teal-50 to-teal-50 rounded-2xl p-8 text-center hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 hover:border-l-4 hover:border-l-[#36718b] border-l-4 border-l-transparent">
                     <div class="text-5xl font-bold bg-gradient-to-r from-[#36718b] to-teal-600 bg-clip-text text-transparent mb-4">
                         <span class="counter" data-target="200">0</span>+
                     </div>
@@ -214,7 +271,7 @@
 
             <!-- About Text -->
             <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in-left">
+                <div>
                     <h3 class="text-3xl font-bold text-gray-900 mb-6">Building Dreams, Creating Spaces</h3>
                     <p class="text-gray-600 mb-4 leading-relaxed">
                         At Ember Home Improvement, we believe every home has potential. Our dedicated team works tirelessly to transform spaces into sanctuaries that reflect your vision and lifestyle.
@@ -241,7 +298,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="fade-in-right">
+                <div>
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-b from-[#36718b] to-teal-600 rounded-2xl blur-2xl opacity-30"></div>
                         <div class="relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition duration-500">
@@ -265,11 +322,11 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                 <!-- Service Card 1 -->
-                <div class="service-card bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md sm:shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                <div class="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md sm:shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-teal-600 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
                     <div class="relative z-10">
-                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
-                            🍳
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-2xl text-[#36718b]">
+                            <i class="fa-solid fa-utensils"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Kitchen Renovation</h3>
                         <p class="text-gray-600 leading-relaxed">Transform your kitchen with modern designs, premium cabinets, and state-of-the-art appliances.</p>
@@ -277,11 +334,11 @@
                 </div>
 
                 <!-- Service Card 2 -->
-                <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-cyan-500 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
                     <div class="relative z-10">
-                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
-                            🚿
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-2xl text-[#36718b]">
+                            <i class="fa-solid fa-bath"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Bathroom Remodel</h3>
                         <p class="text-gray-600 leading-relaxed">Luxurious bathroom designs with elegant fixtures, spa-like features, and modern tile work.</p>
@@ -289,11 +346,11 @@
                 </div>
 
                 <!-- Service Card 3 -->
-                <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-teal-600 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
                     <div class="relative z-10">
-                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
-                            🏠
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-2xl text-[#36718b]">
+                            <i class="fa-solid fa-house"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Exterior Work</h3>
                         <p class="text-gray-600 leading-relaxed">Roofing, siding, landscaping, and exterior upgrades to enhance your home's curb appeal.</p>
@@ -301,11 +358,11 @@
                 </div>
 
                 <!-- Service Card 4 -->
-                <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-teal-600 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
                     <div class="relative z-10">
-                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
-                            🎨
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-2xl text-[#36718b]">
+                            <i class="fa-solid fa-paint-roller"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Interior Design</h3>
                         <p class="text-gray-600 leading-relaxed">Custom interior design solutions that maximize space, comfort, and aesthetic appeal.</p>
@@ -313,11 +370,11 @@
                 </div>
 
                 <!-- Service Card 5 -->
-                <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-teal-600 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
                     <div class="relative z-10">
-                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
-                            📱
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-2xl text-[#36718b]">
+                            <i class="fa-solid fa-wifi"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Smart Home</h3>
                         <p class="text-gray-600 leading-relaxed">IoT solutions and smart automation for modern, efficient, and connected homes.</p>
@@ -325,11 +382,11 @@
                 </div>
 
                 <!-- Service Card 6 -->
-                <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 overflow-hidden group border border-gray-200 hover:border-[#36718b]">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#36718b] to-teal-600 rounded-bl-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
                     <div class="relative z-10">
-                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-3xl">
-                            🔧
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 text-2xl text-[#36718b]">
+                            <i class="fa-solid fa-wrench"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Maintenance & Repairs</h3>
                         <p class="text-gray-600 leading-relaxed">Comprehensive maintenance plans and emergency repair services to keep your home perfect.</p>
@@ -351,22 +408,22 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                 <!-- Reason 1 -->
-                <div class="reason-card bg-gradient-to-br from-teal-50 to-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md sm:shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-teal-200 hover:border-[#36718b]">
-                    <div class="w-14 h-14 bg-[#36718b] rounded-full flex items-center justify-center mb-6 mx-auto text-white text-xl">✓</div>
+                <div class="bg-gradient-to-br from-teal-50 to-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md sm:shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-teal-200 hover:border-[#36718b]">
+                    <div class="w-14 h-14 bg-[#36718b] rounded-full flex items-center justify-center mb-6 mx-auto text-white text-xl"><i class="fa-solid fa-lightbulb"></i></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Thoughtful Design</h3>
                     <p class="text-gray-700 text-center">We listen to your vision and create spaces that truly reflect your style and needs.</p>
                 </div>
 
                 <!-- Reason 2 -->
-                <div class="reason-card bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-teal-200 hover:border-[#36718b]">
-                    <div class="w-14 h-14 bg-[#36718b] rounded-full flex items-center justify-center mb-6 mx-auto text-white text-xl">💰</div>
+                <div class="bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-teal-200 hover:border-[#36718b]">
+                    <div class="w-14 h-14 bg-[#36718b] rounded-full flex items-center justify-center mb-6 mx-auto text-white text-xl"><i class="fa-solid fa-money-bill-wave"></i></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Transparent Pricing</h3>
                     <p class="text-gray-700 text-center">No hidden costs. We provide detailed quotes and keep you informed every step of the way.</p>
                 </div>
 
                 <!-- Reason 3 -->
-                <div class="reason-card bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-teal-200 hover:border-[#36718b]">
-                    <div class="w-14 h-14 bg-[#36718b] rounded-full flex items-center justify-center mb-6 mx-auto text-white text-xl">👷</div>
+                <div class="bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-teal-200 hover:border-[#36718b]">
+                    <div class="w-14 h-14 bg-[#36718b] rounded-full flex items-center justify-center mb-6 mx-auto text-white text-xl"><i class="fa-solid fa-hammer"></i></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Skilled Crews</h3>
                     <p class="text-gray-700 text-center">Our certified professionals bring years of expertise to every project, ensuring top-quality results.</p>
                 </div>
@@ -386,21 +443,21 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                 <!-- Testimonial 1 -->
-                <div class="testimonial-card bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border-l-4 border-l-[#36718b] shadow-md sm:shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                <div class="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border-l-4 border-l-[#36718b] shadow-md sm:shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
                     <div class="flex items-center mb-6"><div class="flex text-amber-400">★★★★★</div></div>
                     <p class="text-gray-700 mb-6 italic leading-relaxed">"Ember transformed our kitchen beyond our expectations. The team was professional, punctual, and delivered exceptional quality. Highly recommended!"</p>
                     <div class="border-t border-gray-200 pt-4"><p class="font-semibold text-gray-900">Sarah Johnson</p><p class="text-gray-600 text-sm">Kitchen Renovation, 2024</p></div>
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="testimonial-card bg-white rounded-2xl p-8 border-l-4 border-l-[#36718b] shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                <div class="bg-white rounded-2xl p-8 border-l-4 border-l-[#36718b] shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
                     <div class="flex items-center mb-6"><div class="flex text-amber-400">★★★★★</div></div>
                     <p class="text-gray-700 mb-6 italic leading-relaxed">"From the initial consultation to the final touch, the Ember team demonstrated professionalism and attention to detail. Our bathroom is now a sanctuary!"</p>
                     <div class="border-t border-gray-200 pt-4"><p class="font-semibold text-gray-900">Michael Chen</p><p class="text-gray-600 text-sm">Bathroom Remodel, 2024</p></div>
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="testimonial-card bg-white rounded-2xl p-8 border-l-4 border-l-[#36718b] shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                <div class="bg-white rounded-2xl p-8 border-l-4 border-l-[#36718b] shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
                     <div class="flex items-center mb-6"><div class="flex text-amber-400">★★★★★</div></div>
                     <p class="text-gray-700 mb-6 italic leading-relaxed">"The smart home upgrades they installed are incredible. Everything works seamlessly, and the savings on energy are already noticeable. Worth every penny!"</p>
                     <div class="border-t border-gray-200 pt-4"><p class="font-semibold text-gray-900">Emily Rodriguez</p><p class="text-gray-600 text-sm">Smart Home Installation, 2024</p></div>
@@ -581,40 +638,33 @@
     </section>
 
     <!-- Footer -->
-		<footer class="bg-neutral-900 text-slate-400 py-8 sm:py-12">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Footer Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <!-- Logo + Name (Left) -->
-                <div class="flex flex-col items-center md:items-start">
-                    <a href="#home" class="inline-block mb-3">
-                        <img src="/images/Ember Homes Improvement Logo.png"
-                            alt="Ember Construction Logo" class="h-12 sm:h-16 mb-2">
-                        <span class="font-bold text-lg sm:text-xl" style="color: #36718b;">Ember <span style="font-weight: 100;">Homes Improvement</span></span>
-                    </a>
-                </div>
+    <footer class="bg-neutral-900 text-slate-400 py-12 text-center">
+        <div class="max-w-3xl mx-auto px-6">
 
-                <!-- Tagline (Center) -->
-                <p class="text-slate-300 text-center text-sm sm:text-base leading-relaxed">
-                    Transforming homes with quality craftsmanship and transparent service.
-                </p>
+            <!-- LOGO + NAME -->
+            <a href="#home" class="inline-block mb-4">
+                <img src="images/Ember Homes Improvement Logo.png"
+                    alt="Ember Homes Improvement Logo" class="h-16 mx-auto mb-2">
+                <span class="font-bold text-xl" style="color: #36718b;">Ember <span style="font-weight: 100;">Homes Improvement</span></span>
+            </a>
 
-                <!-- Links (Right) -->
-                <div class="flex flex-col items-center md:items-end space-y-2">
-                    <a class='text-slate-300 hover:text-[#36718b] transition text-sm sm:text-base' href="./privacypolicy.html">
-                        Privacy Policy
-                    </a>
-                    <p class="text-slate-400 text-xs sm:text-sm">© <span id="currentYear">2025</span> Ember Homes Improvement</p>
-                </div>
-            </div>
+            <!-- TAGLINE -->
+            <p class="text-slate-300 mb-6 leading-relaxed">
+                Transforming homes with quality craftsmanship and transparent service.
+            </p>
 
             <!-- Separator -->
-            <div class="border-t border-slate-700 opacity-60"></div>
+            <div class="w-24 mx-auto my-6 border-t border-slate-700 opacity-60"></div>
 
-            <!-- Bottom Text -->
-            <div class="text-center text-xs sm:text-sm text-slate-500 pt-6">
-                <p>Proudly serving homes across the United States</p>
+            <!-- COPYRIGHT + LINKS -->
+            <div class="flex items-center justify-center space-x-4 text-sm">
+                <p class="text-slate-300">© <span id="currentYear">2025</span> <span style="color: #36718b; font-weight: bold;"> Ember <span style="font-weight: 300;">Homes Improvement</span></span></p>
+                <span class="text-slate-600">•</span>
+                <a class='text-slate-300 hover:text-[#36718b] transition' href='./privacypolicy.html'>
+                    Privacy Policy
+                </a>
             </div>
+
         </div>
     </footer>
 
