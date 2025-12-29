@@ -77,38 +77,7 @@ function validateField(input) {
     }
 }
 
-// Setup form validation for both forms
-['contactForm1', 'contactForm2'].forEach(formId => {
-    const form = document.getElementById(formId);
-    if (!form) return;
-
-    const inputs = form.querySelectorAll('input');
-    inputs.forEach(input => {
-        input.addEventListener('blur', () => validateField(input));
-        input.addEventListener('focus', () => input.classList.add('ring-2', 'ring-teal-500'));
-        input.addEventListener('blur', () => input.classList.remove('ring-2', 'ring-teal-500'));
-    });
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        let isValid = true;
-        inputs.forEach(input => {
-            if (!validateField(input)) isValid = false;
-        });
-
-        if (isValid) {
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = '✓ Sent!';
-            submitBtn.classList.add('bg-green-500');
-            form.reset();
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.classList.remove('bg-green-500');
-            }, 3000);
-        }
-    });
-});
+// Form validation removed - using Google Sheets submission handler for all .inquiryForm forms
 
 // Counter Animation
 function startCounters() {
@@ -151,3 +120,160 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 // Initialize on load
 console.log('Ember site loaded');
+
+// Reset all forms and scroll to top on page load
+window.addEventListener('load', () => {
+    // Scroll to top
+    window.scrollTo(0, 0);
+
+    // Reset all forms
+    document.querySelectorAll('.inquiryForm').forEach(form => {
+        form.reset();
+        // Clear validation styles
+        form.querySelectorAll('input').forEach(input => {
+            input.classList.remove('border-red-500', 'bg-red-50');
+            const errorMsg = input.parentElement.querySelector('.error-msg');
+            if (errorMsg) errorMsg.classList.add('hidden');
+        });
+    });
+
+    // Reset mobile menu state
+    isMenuOpen = false;
+    if (mobileMenu) {
+        mobileMenu.style.maxHeight = '0';
+        mobileMenu.classList.add('hidden');
+    }
+    if (menuIcon) {
+        menuIcon.style.transform = 'rotate(0deg)';
+    }
+});
+
+// form
+// ================= FORM VALIDATION =================
+const formValidators = {
+    fullName: (v) => {
+        const trimmed = v.trim();
+        return trimmed.length >= 3 && /^[a-zA-Z\s]+$/.test(trimmed);
+    },
+    email: (v) => {
+        const trimmed = v.trim();
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed);
+    },
+    phone: (v) => {
+        const digits = v.replace(/\D/g, '');
+        return digits.length === 10;
+    },
+    address: (v) => {
+        const trimmed = v.trim();
+        return trimmed.length >= 5;
+    }
+};
+
+function validateField(input) {
+    const fieldName = input.name;
+    const validator = formValidators[fieldName];
+    const isValid = !validator || validator(input.value);
+    const errorMsg = input.parentElement.querySelector('.error-msg');
+
+    if (!isValid) {
+        input.classList.add('border-red-500', 'bg-red-50');
+        if (errorMsg) errorMsg.classList.remove('hidden');
+        return false;
+    } else {
+        input.classList.remove('border-red-500', 'bg-red-50');
+        if (errorMsg) errorMsg.classList.add('hidden');
+        return true;
+    }
+}
+
+function validateAllFields(form) {
+    const inputs = form.querySelectorAll('input[name="fullName"], input[name="email"], input[name="phone"], input[name="address"]');
+    let isFormValid = true;
+
+    inputs.forEach(input => {
+        if (!validateField(input)) {
+            isFormValid = false;
+        }
+    });
+
+    return isFormValid;
+}
+
+// Setup real-time field validation
+document.querySelectorAll('.inquiryForm input').forEach(input => {
+    input.addEventListener('blur', () => validateField(input));
+    input.addEventListener('focus', () => input.classList.add('ring-2', 'ring-teal-500'));
+    input.addEventListener('blur', () => input.classList.remove('ring-2', 'ring-teal-500'));
+});
+
+// ================= FORM SUBMIT HANDLER =================
+document.querySelectorAll('.inquiryForm').forEach(form => {
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (validateAllFields(form)) {
+        sendEmail(form);
+    } else {
+        Swal.fire({
+            title: "Validation Error",
+            text: "Please fill in all fields correctly.",
+            icon: "error"
+        });
+    }
+  });
+});
+
+// ================= SEND EMAIL =================
+async function sendEmail(form) {
+  if (form.dataset.sending === 'true') return;
+  form.dataset.sending = 'true';
+
+  const get = name => form.querySelector(`[name="${name}"]`);
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+  const loadingText = submitBtn.dataset.loadingText || 'Processing...';
+
+  // Show loader
+  submitBtn.innerHTML = `<span class="btn-loader"></span>${loadingText}`;
+  submitBtn.classList.add('btn-loading');
+
+  const phoneDigits = get('phone').value.replace(/\D/g, '');
+  get('phone').value = `(${phoneDigits.slice(0,3)}) ${phoneDigits.slice(3,6)}-${phoneDigits.slice(6)}`;
+
+  const data = {
+    fullName: get('fullName').value.trim(),
+    email: get('email').value.trim(),
+    phone: get('phone').value.trim(),
+    address: get('address').value.trim(),
+  };
+
+  try {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbxTZ_MUpyEbDkT1KCx3PvvVd391zQi7IQh0nBuJzLWc33JbgZNeCgn4S1pexC-QaKpf/exec", {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+
+    if (result.status === "success") {
+      Swal.fire("Thank you!", "We’ve received your message.", "success");
+      form.reset();
+      // Reset field validation styles
+      form.querySelectorAll('input').forEach(input => {
+        input.classList.remove('border-red-500', 'bg-red-50');
+        const errorMsg = input.parentElement.querySelector('.error-msg');
+        if (errorMsg) errorMsg.classList.add('hidden');
+      });
+    } else {
+      throw new Error("Submission failed");
+    }
+  } catch (err) {
+    Swal.fire("Error", err.message, "error");
+  } finally {
+    form.dataset.sending = 'false';
+    // Hide loader
+    submitBtn.textContent = originalText;
+    submitBtn.classList.remove('btn-loading');
+  }
+}
