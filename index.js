@@ -248,7 +248,7 @@ async function sendEmail(form) {
   };
 
   try {
-    const res = await fetch("https://script.google.com/macros/s/AKfycbxTZ_MUpyEbDkT1KCx3PvvVd391zQi7IQh0nBuJzLWc33JbgZNeCgn4S1pexC-QaKpf/exec", {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbx1Q55NNtw375Tygv6R-PPrngcdzfZQwrTruVMOzRTg15okMIMLBHeG2Wf9mXCORT7H/exec", {
       method: "POST",
       headers: { "Content-Type": "text/plain;charset=utf-8" },
       body: JSON.stringify(data)
