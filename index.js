@@ -277,3 +277,69 @@ async function sendEmail(form) {
     submitBtn.classList.remove('btn-loading');
   }
 }
+
+// Before-After Slider Functionality
+function initBeforeAfterSlider(sliderId, handleId) {
+  const slider = document.getElementById(sliderId);
+  const handle = document.getElementById(handleId);
+  const afterImg = slider.querySelector('.img-after');
+
+  if (!slider || !handle) return;
+
+  let isActive = false;
+
+  const updateSliderPosition = (e) => {
+    if (!isActive) return;
+
+    const rect = slider.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+
+    // Handle touch events
+    if (e.touches) {
+      x = e.touches[0].clientX - rect.left;
+    }
+
+    x = Math.max(0, Math.min(x, rect.width));
+    const percentage = (x / rect.width) * 100;
+
+    afterImg.style.width = percentage + '%';
+    handle.style.left = percentage + '%';
+  };
+
+  // Mouse events
+  handle.addEventListener('mousedown', () => {
+    isActive = true;
+  });
+
+  document.addEventListener('mouseup', () => {
+    isActive = false;
+  });
+
+  document.addEventListener('mousemove', updateSliderPosition);
+
+  // Touch events
+  handle.addEventListener('touchstart', () => {
+    isActive = true;
+  });
+
+  document.addEventListener('touchend', () => {
+    isActive = false;
+  });
+
+  document.addEventListener('touchmove', updateSliderPosition);
+
+  // Click on slider to move handle
+  slider.addEventListener('click', (e) => {
+    const rect = slider.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const percentage = (x / rect.width) * 100;
+
+    afterImg.style.width = percentage + '%';
+    handle.style.left = percentage + '%';
+  });
+}
+
+// Initialize slider when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  initBeforeAfterSlider('sliderAbout', 'handleAbout');
+});

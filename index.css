@@ -218,3 +218,94 @@ input:focus {
     opacity: 0.7;
     pointer-events: none;
 }
+
+/* Before-After Slider Styles */
+.before-after-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: col-resize;
+    user-select: none;
+    display: block;
+}
+
+.before-after-slider .img-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.before-after-slider .img-before {
+    width: 100%;
+    height: 100%;
+}
+
+.before-after-slider .img-after {
+    width: 50%;
+    height: 100%;
+}
+
+.before-after-slider .img-before img,
+.before-after-slider .img-after img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.before-after-slider .label {
+    position: absolute;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1.5px;
+ 
+    bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 6px 12px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+}
+
+.before-after-slider .label-before {
+    right: 15px;
+}
+
+.before-after-slider .label-after {
+    left: 15px;
+}
+
+.slider-handle {
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 20;
+    cursor: col-resize;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.slider-handle::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slider-arrow {
+    display: none;
+}
